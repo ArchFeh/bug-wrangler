@@ -65,14 +65,13 @@ def insert_sql(number, summary, owner='', time='', status=''):
     c.execute("INSERT INTO BUG (NUMBER,SUMMARY,OWNER,TIME,STATUS) \
        VALUES (?,?,?,?,? )", (number, summary, owner, time, status))
     conn.commit()
-    print("数据插入成功")
+    print("Successfully inserted")
 
 
 def get_bugs():
     URL = "https://bugs.gentoo.org/xmlrpc.cgi"
     bzapi = bugzilla.Bugzilla(URL)
-    query = bzapi.url_to_query(
-        "https://bugs.gentoo.org/buglist.cgi?email2=riscv%40gentoo.org&emailassigned_to2=1&emailcc2=1&emailreporter2=1&emailtype2=substring&known_name=riscv&list_id=6094577&query_based_on=riscv&query_format=advanced&resolution=---")
+    query = bzapi.url_to_query("") #search filed
     query["include_fields"] = ["id", "summary"]
     bugs = bzapi.query(query)
     return bugs
