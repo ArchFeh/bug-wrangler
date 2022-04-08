@@ -2,7 +2,9 @@
 bugler is a irc bot for gentoo riscv team to conveniently handle bugs which posted in bugzilla. 
 # changelog: 
 
-when bugs are closed by b.g.o, notify.fix fatal wrong in update bugs
+when bugs are closed by b.g.o, notify.
+
+fix fatal wrong in update bugs
 
 add private message support, you can do what you want without spam your channel
 # To use this bot, command: .b cmd.
