@@ -2,6 +2,8 @@
 bugler is a irc bot for gentoo riscv team to conveniently handle bugs which posted in bugzilla. 
 # changelog: 
 
+split to two version. bugler-lite is handwrited, easy but not stable. bugler-errbot is based on errbot.
+
 when bugs are closed by b.g.o, notify.
 
 fix fatal wrong in update bugs
